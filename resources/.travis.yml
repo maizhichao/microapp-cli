@@ -1,0 +1,43 @@
+language: node_js
+sudo: required
+
+node_js:
+  - "12.18.3"
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+env:
+  global:
+    - PROJECT="{MICROAPP_PROJECT_NAME}"
+    - ROLE="WebUI"
+    - PACKAGE_VERSION="v1.0.${TRAVIS_BUILD_NUMBER}"
+
+# addons:
+#   sonarcloud:
+#     organization: "seds"
+
+before_script:
+  - export ARTIFACT_NAME="${PROJECT}-${ROLE}-${TRAVIS_BRANCH}-${PACKAGE_VERSION}.zip"
+  - export TAG=`echo "$PROJECT-$ROLE:$TRAVIS_BRANCH-$PACKAGE_VERSION" | tr '[:upper:]' '[:lower:]'`
+  - export TAG_LATEST=`echo "$PROJECT-$ROLE:$TRAVIS_BRANCH-latest" | tr '[:upper:]' '[:lower:]'`
+
+script:
+  # - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sonar-scanner -Dsonar.projectVersion=${PACKAGE_VERSION}; fi'
+  - yarn run prod
+  - echo -n "${PACKAGE_VERSION}" > dist/version.txt
+
+before_deploy:
+  - cd ./dist && zip -r ../${ARTIFACT_NAME} ./ && cd ..
+  - 'curl -o upload.sh -H "Authorization: token ${GITHUB_TOKEN}" ${GITHUB_UPLOAD_SCRIPT}'
+  - chmod a+x ./upload.sh
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    on:
+      all_branches: true
+    script:
+      - ./upload.sh ${ARTIFACT_NAME} ${PROJECT} ${TRAVIS_BRANCH} ${ROLE} ${PACKAGE_VERSION} ${OSS_BUCKET} ${OSS_KEY} ${OSS_SECRET}

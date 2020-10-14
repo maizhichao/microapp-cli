@@ -1,0 +1,32 @@
+{
+  "plugins": ["react"],
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "settings": {
+    "react": {
+      "version": "^16.8.0"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "amd": true,
+    "es6": true
+  },
+  "globals": {
+    "System": true,
+    "AMap": true
+  },
+  "rules": {
+    "react/wrap-multilines": 0,
+    "no-undef": 1,
+    "no-unused-vars": 0,
+    "react/prop-types": 0,
+    "react/no-string-refs": 0,
+    "react/jsx-key": 0,
+    "react/display-name": 0,
+    "no-extra-boolean-cast": 0,
+    "react/jsx-no-target-blank": 1,
+    "react/no-unescaped-entities": 1
+  }
+}

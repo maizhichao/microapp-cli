@@ -1,0 +1,42 @@
+{
+  "plugins": ["react"],
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "^16.10.2"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "amd": true,
+    "es6": true
+  },
+  "globals": {
+    "I18N": true,
+    "AMap": true,
+    "System": true,
+    "AMapLoader": true
+  },
+  "rules": {
+    "no-undef": 1,
+    "no-unused-vars": 0,
+    "react/prop-types": 0,
+    "react/no-string-refs": 0,
+    "react/jsx-key": 0,
+    "react/no-find-dom-node": 0,
+    "react/display-name": 0,
+    "react/jsx-no-target-blank": 0,
+    "react/no-direct-mutation-state": 0,
+    "no-case-declarations": 0,
+    "no-extra-boolean-cast": 0,
+    "no-useless-escape": 0,
+    "react/no-unescaped-entities": 1,
+    "no-redeclare": 1
+  }
+}
