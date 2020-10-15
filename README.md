@@ -9,7 +9,7 @@ If you have questions or need help, please email to maizhichao@hotmail.com
 ### yarn
 
 ```sh
-yarn add microapp-cli -g
+yarn global add microapp-cli
 ```
 
 ### npm
