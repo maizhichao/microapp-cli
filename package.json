@@ -1,6 +1,6 @@
 {
   "name": "microapp-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "repository": "https://github.com/maizhichao/microapp-cli",
   "author": "zhichao.mai",
