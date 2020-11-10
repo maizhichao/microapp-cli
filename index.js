@@ -19,10 +19,10 @@ validator.validateNodeVersion();
 
 const run = async () => {
   files.makeWorkingDirectory();
-
+  const resourceType = await inquirer.askResourceType();
   const info = await inquirer.askRepoInfo();
 
-  await files.getResources(info);
+  await files.getResources(resourceType, info);
 
   install.start();
 
