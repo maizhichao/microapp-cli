@@ -1,0 +1,14 @@
+{
+  "imports": {
+    "@microapp/base": "%PUBLIC_URL%/main.js",
+    "antd": "%PUBLIC_URL%/library/antd.js",
+    "axios": "%PUBLIC_URL%/library/axios.js",
+    "lodash": "%PUBLIC_URL%/library/lodash.js",
+    "moment": "%PUBLIC_URL%/library/moment.js",
+    "moment-timezone": "%PUBLIC_URL%/library/moment.js",
+    "react": "%PUBLIC_URL%/library/react.js",
+    "react-router": "%PUBLIC_URL%/library/react-router.js",
+    "react-dom": "%PUBLIC_URL%/library/react-dom.js",
+    "react-dom/server": "%PUBLIC_URL%/library/react-dom-server.js"
+  }
+}

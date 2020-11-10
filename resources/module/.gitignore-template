@@ -59,6 +59,7 @@ typings/
 
 # build out
 dist
+build
 
 # temporary files
 temp

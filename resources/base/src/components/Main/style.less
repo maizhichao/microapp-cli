@@ -1,0 +1,23 @@
+.se-main-content {
+  flex: auto;
+  display: block;
+  padding: 10px;
+  &-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    .ant-spin-container {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+  .ant-spin-nested-loading > div > .ant-spin {
+    max-height: unset;
+  }
+}
+
+.se-text-danger {
+  color: @error-color;
+  font-weight: bold;
+}

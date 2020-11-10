@@ -3,7 +3,7 @@
   "version": "{MICROAPP_PROJECT_VERSION}",
   "description": "{MICROAPP_NPM_PACKAGE_DESCRIPTION}",
   "main": "index.js",
-  "distFolder": "./dist",
+  "distFolder": "./build",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --colors",
     "prod": "cross-env NODE_ENV=production webpack"
@@ -53,7 +53,7 @@
     "@aspnet/signalr": "^1.1.4",
     "@babel/plugin-transform-runtime": "^7.11.5",
     "@hot-loader/react-dom": "^16.13.0",
-    "antd": "3.26.18",
+    "antd": "{MICROAPP_BASE_ANTD_VERSION}",
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "cross-env": "^5.2.0",

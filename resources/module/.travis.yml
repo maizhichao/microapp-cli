@@ -27,10 +27,10 @@ before_script:
 script:
   # - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sonar-scanner -Dsonar.projectVersion=${PACKAGE_VERSION}; fi'
   - yarn run prod
-  - echo -n "${PACKAGE_VERSION}" > dist/version.txt
+  - echo -n "${PACKAGE_VERSION}" > build/version.txt
 
 before_deploy:
-  - cd ./dist && zip -r ../${ARTIFACT_NAME} ./ && cd ..
+  - cd ./build && zip -r ../${ARTIFACT_NAME} ./ && cd ..
   - 'curl -o upload.sh -H "Authorization: token ${GITHUB_TOKEN}" ${GITHUB_UPLOAD_SCRIPT}'
   - chmod a+x ./upload.sh
 

@@ -1,0 +1,27 @@
+{
+  "plugins": ["react"],
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "^17.0.1"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "amd": true,
+    "es6": true
+  },
+  "globals": {
+    "System": true
+  },
+  "rules": {
+    "no-unused-vars": 0,
+    "react/prop-types": 0
+  }
+}

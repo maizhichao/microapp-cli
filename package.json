@@ -8,6 +8,14 @@
   "bin": {
     "create-microapp": "./index.js"
   },
+  "keywords": [
+    "MicroFrontends",
+    "Microapp",
+    "React",
+    "Javascript",
+    "Typescript",
+    "CLI"
+  ],
   "dependencies": {
     "@octokit/auth-basic": "^1.4.6",
     "@octokit/rest": "^18.0.6",

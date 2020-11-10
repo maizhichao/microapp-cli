@@ -3,7 +3,6 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "**/dist": true,
-    "**/build": true,
     "**/coverge": true
   },
   "editor.tabSize": 2,
