@@ -32,13 +32,11 @@ const config = {
     library: "{MICROAPP_NPM_PACKAGE_NAME}"
   },
   externals: [
-    /^@se\/(\w|\/)*$/,
+    /^@microapp\/(\w|\/)*$/,
     /^antd$/,
     /^axios$/,
-    /^classnames$/,
     /^lodash$/,
     /^moment$/,
-    /^moment-timezone$/,
     /^react$/,
     /^react-dom$/,
     /^react-dom\/server$/,

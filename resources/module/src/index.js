@@ -1,5 +1,5 @@
 import { setPublicPath } from "systemjs-webpack-interop";
-setPublicPath("@se/module/{MICROAPP_NPM_PACKAGE_NAME}");
+setPublicPath("@microapp/{MICROAPP_NPM_PACKAGE_NAME}");
 
 import React from "react";
 const Module = React.lazy(() => import("./module"));
