@@ -19,10 +19,10 @@ validator.validateNodeVersion();
 
 const run = async () => {
   files.makeWorkingDirectory();
-  const resourceType = await inquirer.askResourceType();
-  const info = await inquirer.askRepoInfo();
+  const moduleType = await inquirer.askModuleType();
+  const info = await inquirer.askRepoInfo(moduleType);
 
-  await files.getResources(resourceType, info);
+  await files.getResources(moduleType, info);
 
   install.start();
 
@@ -30,7 +30,7 @@ const run = async () => {
 
   console.log(
     chalk.green(
-      "All done! you can run [yarn run dev] to start your webpack dev server"
+      "All done! you can run [yarn start] to start your webpack dev server"
     )
   );
 };

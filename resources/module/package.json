@@ -5,8 +5,8 @@
   "main": "index.js",
   "distFolder": "./build",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --colors",
-    "prod": "cross-env NODE_ENV=production webpack"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --colors",
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@babel/plugin-proposal-export-default-from": "^7.12.1",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
     "babel-eslint": "^10.1.0",
@@ -26,10 +27,12 @@
     "babel-plugin-import": "^1.8.0",
     "bundle-loader": "^0.5.6",
     "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^5.2.0",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^4.1.0",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.11.1",
@@ -50,14 +53,10 @@
     "write-file-webpack-plugin": "^4.5.1"
   },
   "dependencies": {
-    "@aspnet/signalr": "^1.1.4",
-    "@babel/plugin-transform-runtime": "^7.11.5",
     "@hot-loader/react-dom": "^16.13.0",
-    "antd": "{MICROAPP_BASE_ANTD_VERSION}",
+    "antd": "^4.8.0",
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
-    "cross-env": "^5.2.0",
-    "eslint-plugin-react-hooks": "^4.1.0",
     "lodash": "^4.17.4",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",

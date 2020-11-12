@@ -26,7 +26,7 @@ npm install microapp-cli -g
 ```sh
 npx create-microapp [my-microapp]
 cd my-microapp
-yarn run dev
+yarn start
 ```
 
 A message will prompt up asking for the module type, you can choose from **[child module]** and **[base module]**.

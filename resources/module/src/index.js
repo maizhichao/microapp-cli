@@ -2,11 +2,4 @@ import { setPublicPath } from "systemjs-webpack-interop";
 setPublicPath("@microapp/{MICROAPP_NPM_PACKAGE_NAME}");
 
 import React from "react";
-const Module = React.lazy(() => import("./module"));
-
-const routes = {
-  path: "{MICROAPP_BASE_ROUTE_PATH}",
-  component: Module
-};
-
-export { routes };
+export default React.lazy(() => import("./module"));

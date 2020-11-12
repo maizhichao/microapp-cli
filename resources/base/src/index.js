@@ -1,5 +1,5 @@
 import { setPublicPath } from "systemjs-webpack-interop";
-setPublicPath("@microapp/base");
+setPublicPath("@microapp/{MICROAPP_NPM_PACKAGE_NAME}");
 
 import React from "react";
 import ReactDOM from "react-dom";

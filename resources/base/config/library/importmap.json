@@ -1,6 +1,6 @@
 {
   "imports": {
-    "@microapp/base": "%PUBLIC_URL%/main.js",
+    "@microapp/{MICROAPP_NPM_PACKAGE_NAME}": "%PUBLIC_URL%/main.js",
     "antd": "%PUBLIC_URL%/library/antd.js",
     "axios": "%PUBLIC_URL%/library/axios.js",
     "lodash": "%PUBLIC_URL%/library/lodash.js",

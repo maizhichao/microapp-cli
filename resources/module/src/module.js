@@ -1,15 +1,7 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
 import Main from "./components/main";
-import configStore from "./configure-store";
-const store = configStore();
-import { Provider } from "react-redux";
+import reducers from "./reducers";
+import { store } from "@microapp/{MICROAPP_BASE_MODULE_NAME}";
 
-function Module(props) {
-  return (
-    <Provider store={store}>
-      <Main />
-    </Provider>
-  );
-}
-export default Module;
+store.injectReducer("{MICROAPP_CHILD_MODULE_REDUX_KEY}", reducers);
+
+export default Main;
