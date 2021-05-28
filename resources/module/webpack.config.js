@@ -28,8 +28,7 @@ const config = {
     path: outputPath,
     publicPath: publicPath,
     filename: "[name].js",
-    libraryTarget: "system",
-    library: "{MICROAPP_NPM_PACKAGE_NAME}"
+    libraryTarget: "system"
   },
   externals: [
     /^@microapp\/(\w|\/)*$/,
@@ -159,7 +158,7 @@ const config = {
   },
   devtool: isEnvProduction ? "none" : "source-map",
   devServer: {
-    https: true,
+    https: false,
     disableHostCheck: true,
     host: "localhost",
     port: "{MICROAPP_LOCALHOST_PORT}",

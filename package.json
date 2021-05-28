@@ -6,7 +6,7 @@
   "author": "zhichao.mai",
   "license": "MIT",
   "bin": {
-    "create-microapp": "./index.js"
+    "microapp-cli": "./index.js"
   },
   "keywords": [
     "MicroFrontends",
